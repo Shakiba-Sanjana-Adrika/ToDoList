@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Theme">
+
+        <ListPreference
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:key="theme_key"
+            app:title="Theme"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync_key"
+            app:summaryOff="Off"
+            app:summaryOn="On"
+            app:title="@string/sync_title" />
+
+        <ListPreference
+            app:dependency="sync_key"
+            app:entries="@array/hour_entries"
+            app:entryValues="@array/hour_values"
+            app:key="sync_time_key"
+            app:title="Select sync time"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.DetailsFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_50">
+
+        <!--Plus icon image view-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/plus" />
+
+        <!--Add a task text view-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/addATask"
+            android:textColor="@color/Highlight_text"
+            android:textSize="@dimen/sp_28"
+            android:textStyle="bold" />
+
+        <!--Fill the details text view-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/fillTheDetails"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--Task title text view-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="@string/taskTitle"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold" />
+
+                <!--Task title edit text-->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/addTaskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/btn_border"
+                    android:padding="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_22" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!--Task date and time text view-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_weight="2"
+                        android:text="@string/taskDateAndTime"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/sp_22"
+                        android:textStyle="bold" />
+
+                    <!--Calender icon image view-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/dateTimeBtn"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_35"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/dp_80"
+                        android:src="@drawable/calendar"
+                        android:text="@string/date" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--Task date and time text view-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/taskDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/btn_border"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_22" />
+
+                <!--Subtasks text view-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/subtasks"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold" />
+
+                <!--Subtasks edit text-->
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/subTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/btn_border"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/sp_22" />
+
+                <!--Add task button-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addTaskBtn"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/addTaskBtn" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
